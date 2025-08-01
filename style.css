@@ -691,7 +691,7 @@ body {
 .demo-content h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--metallic-silver);
     margin-bottom: 1rem;
 }
 
@@ -822,9 +822,10 @@ body {
 /* Footer */
 .footer {
     padding: 2rem 0;
-    background: var(--text-dark);
-    color: rgba(255, 255, 255, 0.8);
+    background: var(--bg-darker);
+    color: var(--text-light);
     text-align: center;
+    border-top: 1px solid var(--border);
 }
 
 .footer-content {
@@ -841,13 +842,13 @@ body {
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
