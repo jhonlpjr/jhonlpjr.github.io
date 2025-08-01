@@ -12,24 +12,30 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: var(--text-dark);
+    background-color: var(--bg-darker);
 }
 
 /* Variables CSS */
 :root {
-    --primary-color: #4F46E5;
-    --secondary-color: #7C3AED;
+    --primary-color: #0EA5E9;
+    --secondary-color: #3B82F6;
     --accent-color: #06B6D4;
-    --text-dark: #1F2937;
-    --text-light: #6B7280;
-    --bg-light: #F9FAFB;
-    --bg-dark: #111827;
+    --metallic-silver: #C0C0C0;
+    --metallic-blue: #4682B4;
+    --text-dark: #FFFFFF;
+    --text-light: #E5E7EB;
+    --text-muted: #9CA3AF;
+    --bg-light: #1F2937;
+    --bg-dark: #0F172A;
+    --bg-darker: #020617;
     --white: #FFFFFF;
-    --border: #E5E7EB;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --border: #374151;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
     --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --metallic-gradient: linear-gradient(135deg, #C0C0C0, #E8E8E8, #A8A8A8);
+    --tech-gradient: linear-gradient(135deg, #0F172A, #1E293B, #334155);
     --max-width: 1200px;
 }
 
@@ -45,7 +51,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--text-dark);
+    color: var(--metallic-silver);
     position: relative;
 }
 
@@ -59,6 +65,7 @@ body {
     height: 4px;
     background: var(--gradient);
     border-radius: 2px;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
 }
 
 /* Botones */
@@ -119,11 +126,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -138,8 +146,9 @@ body {
 .nav-logo a {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--metallic-silver);
     text-decoration: none;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
 }
 
 .nav-menu {
@@ -152,13 +161,14 @@ body {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
+    text-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
 }
 
 .nav-link::after {
@@ -193,7 +203,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--tech-gradient);
     color: var(--white);
     min-height: 100vh;
     display: flex;
@@ -209,7 +219,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,800 1000,1000"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(14,165,233,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
 }
 
 .hero-container {
@@ -232,10 +242,11 @@ body {
 }
 
 .highlight {
-    background: linear-gradient(45deg, #FFD700, #FFA500);
+    background: var(--metallic-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
 }
 
 .hero-subtitle {
@@ -308,7 +319,7 @@ body {
 /* About Section */
 .about {
     padding: 100px 0;
-    background: var(--white);
+    background: var(--bg-dark);
 }
 
 .about-content {
@@ -402,16 +413,17 @@ body {
 }
 
 .timeline-content {
-    background: var(--white);
+    background: var(--bg-dark);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .timeline-content h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--metallic-silver);
     margin-bottom: 0.5rem;
 }
 
@@ -450,7 +462,7 @@ body {
 /* Technologies Section */
 .technologies {
     padding: 100px 0;
-    background: var(--white);
+    background: var(--bg-dark);
 }
 
 .tech-categories {
@@ -466,7 +478,7 @@ body {
 .tech-category h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--metallic-silver);
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
@@ -493,12 +505,15 @@ body {
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
+    border: 1px solid var(--border);
 }
 
 .tech-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    background: var(--white);
+    background: var(--bg-dark);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
 }
 
 .tech-item i {
@@ -509,7 +524,7 @@ body {
 
 .tech-item span {
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-light);
     font-size: 0.875rem;
 }
 
@@ -526,11 +541,12 @@ body {
 }
 
 .project-card {
-    background: var(--white);
+    background: var(--bg-dark);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    border: 1px solid var(--border);
 }
 
 .project-card:hover {
@@ -603,7 +619,7 @@ body {
 .project-content h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--metallic-silver);
     margin-bottom: 1rem;
 }
 
@@ -626,12 +642,13 @@ body {
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
+    border: 1px solid var(--border);
 }
 
 /* Demos Section */
 .demos {
     padding: 100px 0;
-    background: var(--white);
+    background: var(--bg-dark);
 }
 
 .demos-grid {
@@ -641,11 +658,12 @@ body {
 }
 
 .demo-card {
-    background: var(--white);
+    background: var(--bg-light);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    border: 1px solid var(--border);
 }
 
 .demo-card:hover {
@@ -655,8 +673,9 @@ body {
 
 .demo-preview {
     height: 200px;
-    background: var(--bg-light);
+    background: var(--bg-dark);
     position: relative;
+    border-bottom: 1px solid var(--border);
 }
 
 .demo-preview iframe {
