@@ -333,7 +333,7 @@ function updateCopyrightYear() {
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.querySelector('.footer-content p');
     if (copyrightElement) {
-        copyrightElement.textContent = `© ${currentYear} Tu Nombre. Todos los derechos reservados.`;
+        copyrightElement.textContent = `© ${currentYear} Jonathan Pierre Reyna Rossel. Todos los derechos reservados.`;
     }
 }
 
